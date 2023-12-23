@@ -1,12 +1,14 @@
 <template>
   <header>
-    <nav class="flex justify-between items-center relative">
-      <div>
-        <img src=".././assets/img/logo.svg" alt="logo" />
+    <nav class="flex justify-between items-center relative bg-gray-200 px-5 py-3 rounded-3xl shadow-2xl shadow-slate-500 z-10">
+      <div class="px-5">
+        <a href="/">
+          <img src="../assets/img/hima.png" alt="logo" class="w-14" />
+        </a>
       </div>
-      <NavList class="hidden md:flex space-x-4 justify-between items-center" />
-      <MainButton class="hidden self-baseline md:block bg-brightRed text-white">
-        Get Started
+      <NavList class="hidden md:flex space-x-4 justify-between items-center text-gray-700" />
+      <MainButton class="hidden self-baseline md:block bg-slate-600 text-white my-auto">
+        Login
       </MainButton>
       <DropDownNav />
     </nav>

@@ -1,22 +1,28 @@
 <template>
-  <ul>
+  <ul class="font-bold">
     <li>
-      <NavLink>Pricing</NavLink>
+      <router-link to="/">Home</router-link>
+      <!-- <NavLink to="/">Home</NavLink> -->
     </li>
     <li>
-      <NavLink>Product</NavLink>
+      <!-- <NavLink to="/detail">Detail</NavLink> -->
+      <router-link to="/about">About</router-link>
     </li>
     <li>
-      <NavLink>About Us</NavLink>
+      <router-link to="/category">Category</router-link>
     </li>
     <li>
-      <NavLink>Community</NavLink>
-    </li>
-    <li>
-      <NavLink>Careers</NavLink>
+      <router-link to="/contact">Contact</router-link>
     </li>
   </ul>
+
 </template>
-<script setup>
-import NavLink from "./NavLink.vue";
+<script>
+import NavLink from "@/components/NavLink.vue";
+
+export default {
+  components: {
+    NavLink,
+  },
+};
 </script>

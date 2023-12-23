@@ -1,22 +1,21 @@
 <template>
-  <div class="group flex flex-col space-y-2">
-    <a :href="href" class="py-2 block">
-      <slot></slot>
-    </a>
+  <router-link :to="to" class="py-2 block text-yellow-800 mx-5">
+    <slot></slot>
     <span
       class="block bg-red-500 h-0.5 scale-0 origin-left transition-transform duration-500 ease-in-out group-hover:scale-100"
     ></span>
-  </div>
+  </router-link>
 </template>
 <script setup>
-import { ref } from "vue";
+
+import { RouterLink, RouterView } from 'vue-router'
+
 const props = defineProps({
-  href: {
-    required: false,
-    default: "",
+  to: {
+    required: true,
+    default: "/",
   },
 });
-const href = ref(props.href);
 </script>
 <style scoped>
 h1 {
